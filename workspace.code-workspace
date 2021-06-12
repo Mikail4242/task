@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\react-complete-guide\\node_modules"
+		},
+		{
+			"path": "..\\react-complete-guide\\public"
+		},
+		{
+			"path": "..\\react-complete-guide\\src"
+		}
+	]
+}
