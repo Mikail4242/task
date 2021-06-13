@@ -1,4 +1,5 @@
 import React from 'react';
+
 function Accordion({questions, answers , active, setActive}){
 /**
  * function toggle does the follow:
@@ -6,9 +7,11 @@ function Accordion({questions, answers , active, setActive}){
  * if it's get false will do the next statement which is going to hide it
  * 
  */
+    const isActive = active === questions;
+
     const toggle = () => {
-        if(active === questions){
-            setActive("12");
+        if(isActive){
+            setActive(null);
         } 
         else {
             setActive(questions);
@@ -17,18 +20,17 @@ function Accordion({questions, answers , active, setActive}){
 
     return (
         <div>
-            <div className={(active === questions ? "showit" : "") + " container"} onClick={() => toggle()}>
+            <div className={`${isActive ? "extent" : ""} +  container`} onClick={toggle}>
                 <h2 className="numbers">{questions}</h2>
-                <span className="arrow">
-            {(active === questions ? "⏷" : "⏶")}
-                </span>
+                    <span className="arrow">
+                        {`${isActive ? '⏷' : '⏶'}`}
+                    </span>
             </div>
-            <div className={(active === questions ? "show" : "") + " accordion"}> 
+            <div className={`${isActive ? "show" : ""} +  accordion`}> 
                 <p>{answers}</p>
             </div>
         </div>
     )
 }
-
 
 export default Accordion;

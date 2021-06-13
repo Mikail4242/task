@@ -1,4 +1,3 @@
-
 import AccordionBody from "./components/AccordionBody";
 
 function App() {

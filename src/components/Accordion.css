@@ -58,7 +58,7 @@ transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
-.container.showit {
+.container.extent {
     padding-top: 15px;
     padding-bottom: 15px;
     transition: all 0.2s ease-in-out;
